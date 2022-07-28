@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Student</title>
+</head>
+<body>
+    <label for="nilai">Score :</label><input id="score" type="number" name="nilai"><br><br>
+    <button onclick="HitungGrade()">Cek Grade</button>
+    <p id="grade"></p>
+    <script>
+        function HitungGrade() {
+            let score = document.getElementById("score").value;
+            let result = ""
+            if (score >= 90) {
+                result = "A"
+            } else if (score >=80) {
+                result = "B"
+            } else if (score >=70) {
+                result = "C"
+            } else if (score >=60) {
+                result = "D"
+            } else if (score <=50) {
+                result = "E"
+            }
+            document.getElementById("grade").innerText = result;
+        }
+    </script>
+</body>
+</html>
